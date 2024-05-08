@@ -587,16 +587,11 @@ selectFilter.addEventListener("changed", filterProducts);
 function filterProducts() {
   // Lấy giá trị đã chọn từ dropdown select
   let selectedName = selectFilter.value;
-
   // Lọc sản phẩm dựa trên tên
   let filteredProducts = dataProducts.filter(function (product) {
-    // return selectedName === "all" || product.name === selectedName;
     return selectedName === product.typePrd;
   });
 
   // Hiển thị danh sách sản phẩm đã lọc
-  // renderProducts(filteredProducts);
-//   console.log(507,selectedName,  filteredProducts);
-renderProductItem(filteredProducts);
-
+  renderProductItem(filteredProducts);
 }
